@@ -25,6 +25,7 @@ RUN chmod -R 755                                                        /var/lib
 ADD build/import_sql.sh                                                 /import_sql.sh
 RUN chmod +x                                                            /import_sql.sh
 ENV MYSQL_USER                                                          root
+ENV MYSQL_DATABASE                                                      my_db
 ENV MYSQL_PASS                                                          **Random**
 ENV REPLICATION_MASTER                                                  **False**
 ENV REPLICATION_SLAVE                                                   **False**
